@@ -1,8 +1,9 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDiscord } from "@fortawesome/free-brands-svg-icons";
+import { faDiscord, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faMessage } from "@fortawesome/free-regular-svg-icons";
-import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import profileImage from "../assets/cv.jpg";
 import React from "react";
 
 function LandingPage() {
@@ -13,28 +14,31 @@ function LandingPage() {
             <section className="absolute inset-0 mx-auto lg:w-1/2 sm:w-4/5 bg-[#f5f5eb] z-10 overflow-x-scroll h-full alegreya-font">
                 <div className="relative z-0 bg-[url('/src/assets/jumbotron.jpg')] bg-cover bg-center w-full h-60 m-0 p-0">
                 </div>
-                <div className="bg-babypeach h-40 w-40 rounded-full mx-auto p-3 text-center">
-                    <h2>gambar</h2>
-                    <img src="" alt="" />
+                <div className="h-40 sm:w-48 w-48 rounded-full mx-auto relative top-[-100px] p-3 text-center">
+                    <img src={profileImage} className="w-100 rounded-full" alt="Retno Ardanari D R" />
                 </div>
                 <h3 className="text-center my-2">Retno Ardanari Dwi Rahmawati</h3>
-                <div className="flex justify-center">
-                    <span className="mx-1">
-                        <FontAwesomeIcon icon={faDiscord} size="1x" />
-                    </span>
-                    <span className="mx-1">
-                        <FontAwesomeIcon icon={faLinkedinIn} size="1x" />
-                    </span>
-                    <span className="mx-1">
-                        <FontAwesomeIcon icon={faMessage} size="1x" />
-                    </span>
-                    <span className="mx-1">
-                        <FontAwesomeIcon icon={faPhone} size="1x" />
-                    </span>
-                </div>
-                <summary className="p-7 text-justify">I'm Frontend || Fullstack Developer. I have experience in Fullstack position with stack tech React Js and backend using Go language.
-                    And currently working in Odoo Frontend Developer, with stack tech Odoo software. As Odoo developer, I use HTML,CSS,JS and Python. 
+                <summary className="p-7 text-justify">
+                    I'm a Frontend & Fullstack Developer with experience in building web applications using React.js and backend development with Go language. Currently, I'm working as a Frontend Developer specializing in Odoo, focusing on custom modules and UI development using HTML, CSS, JavaScript, and Python. I enjoy solving problems through clean code and creating user-friendly interfaces. 
                 </summary>
+                <h1 className="px-7 mx-auto py-1 my-1 underline font-extrabold text-2xl text-[#b3907a]">Contact: </h1>
+                <div className="px-7">
+                        <a className="mx-1 block" href="https://github.com/retnoardanaridr" title="Github">
+                            <FontAwesomeIcon icon={faDiscord} size="1x" /> https://github.com/retnoardanaridr
+                        </a>
+                        <a className="mx-1 block" href="http://github.com/retnoardanaridrsecond28/" title="Github">
+                            <FontAwesomeIcon icon={faDiscord} size="1x" /> http://github.com/retnoardanaridrsecond28/
+                        </a>
+                        <a className="mx-1 block" href="https://www.linkedin.com/in/retno-ardanari-dwi-rahmawati/" title="LinkedIn">
+                            <FontAwesomeIcon icon={faLinkedinIn} size="1x" /> https://www.linkedin.com/in/retno-ardanari-dwi-rahmawati/
+                        </a>
+                        <a className="mx-1 block" href="https://wa.me/6282132412942">
+                            <FontAwesomeIcon icon={faWhatsapp} size="1x" /> +6282132412942
+                        </a>
+                        <a className="mx-1 block" href="mailto:retnoardanari1728@gmail.com">
+                            <FontAwesomeIcon icon={faMessage} size="1x" /> retnoardanari1728@gmail.com
+                        </a>
+                </div>
                 <h1 className="px-7 mx-auto py-2 my-1 font-extrabold text-2xl text-[#b3907a] underline">About Me: </h1>
                 <section className="px-7 mx-auto py-2 my-3 bg-[#c1b6a3] text-white rounded-lg w-11/12">
                     <h4 className="font-extrabold text-xl text-[#b3907a]">Education: </h4>
@@ -132,6 +136,8 @@ function LandingPage() {
                         <li>React JS</li>
                         <li>Express JS</li>
                         <li>Odoo Software</li>
+                        <li>Tailwind</li>
+                        <li>Bootstrap</li>
                     </ul>
                 </article>
                 <h1 className="px-7 mx-auto py-1 my-1 underline font-extrabold text-2xl text-[#b3907a]">Project Portofolio: </h1>
