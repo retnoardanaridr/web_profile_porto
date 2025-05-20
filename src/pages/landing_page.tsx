@@ -5,13 +5,20 @@ import { faMessage } from "@fortawesome/free-regular-svg-icons";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import profileImage from "../assets/cv.jpg";
 import React from "react";
+import ListProject from "./list_project";
+
+
+import workProjectOne from "../assets/workone.png";
+import workProjecttwo from "../assets/worktwo.png";
+import personalProjectOne from "../assets/personaone.png";
+import personalProjectTwo from "../assets/personaltwo.png";
 
 function LandingPage() {
     return (
         <div className="h-screen relative bg-cover bg-center overflow-hidden">
             <div className="absolute inset-0 h-full w-full filter blur-sm p-5 bg-[url('/src/assets/bg-web.jpg')] bg-cover bg-center z-0">
             </div>
-            <section className="absolute inset-0 mx-auto lg:w-1/2 sm:w-4/5 bg-[#f5f5eb] z-10 overflow-x-scroll h-full alegreya-font">
+            <section className="absolute inset-0 mx-auto lg:w-1/2 sm:w-4/5 bg-[#f5f5eb] z-10 overflow-y-scroll h-full alegreya-font">
                 <div className="relative z-0 bg-[url('/src/assets/jumbotron.jpg')] bg-cover bg-center w-full h-60 m-0 p-0">
                 </div>
                 <div className="h-40 sm:w-48 w-48 rounded-full mx-auto relative top-[-100px] p-3 text-center">
@@ -141,8 +148,32 @@ function LandingPage() {
                     </ul>
                 </article>
                 <h1 className="px-7 mx-auto py-1 my-1 underline font-extrabold text-2xl text-[#b3907a]">Project Portofolio: </h1>
-                <article>
-                    
+                <article className="px-7">
+                    <ListProject 
+                    workProject={
+                        <>
+                            <div className="item">
+                                <img className="w-25 mx-2" src={workProjectOne} alt="Work Project 1" />
+                                <h6>Kainmu</h6>
+                            </div>
+                            <div className="item">
+                                <img className="w-25 mx-2" src={workProjecttwo} alt="Work Project 1" />
+                                <h6>Inessa</h6>
+                            </div>
+                        </>
+                    }
+                    personalProject={
+                        <>
+                            <div className="item">
+                                <img className="w-25 mx-2" src={personalProjectOne} alt="Personal Project One" />
+                                <h6>Waysbeans</h6>
+                            </div>
+                            <div className="item">
+                                <img className="w-25 mx-2" src={personalProjectTwo} alt="Personal Project One" />
+                                <h6>Dewetour</h6>
+                            </div>
+                        </>
+                    } />
                 </article>
             </section>
         </div>
