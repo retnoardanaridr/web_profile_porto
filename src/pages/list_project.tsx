@@ -10,10 +10,10 @@ const carouselOwlOptions = {
     loop: true,
     margin:10,
     nav:true,
-    resposive: {
-        0: {item:1},
-        600: {item:1},
-        1000: {item:2},
+    responsive: {
+        0: { items: 1 },
+        600: { items: 1 },
+        1000: { items: 2 }
     }
 
 }
