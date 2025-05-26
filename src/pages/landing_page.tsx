@@ -5,15 +5,40 @@ import { faMessage } from "@fortawesome/free-regular-svg-icons";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import profileImage from "../assets/cv.jpg";
 import React from "react";
+
 import ListProject from "./list_project";
+import { workProjectData }from "../data/work-project";
+import { personalProjectData  } from "../data/personal-project";
 
-
-import workProjectOne from "../assets/workone.png";
-import workProjecttwo from "../assets/worktwo.png";
 import personalProjectOne from "../assets/personaone.png";
 import personalProjectTwo from "../assets/personaltwo.png";
 
+// type workProjectProps = {
+//     id: number;
+//     title: string;
+//     img: string;
+//     descriptionDe: string;
+//     descriptionEn: string;
+//     stackTech: React.ReactNode;
+// }
+
 function LandingPage() {
+    // const [workProject, setWorkProject ] = useState<workProjectProps[]>([]);
+    
+    // useEffect(() => {
+    //     fetch('/data/work-project.json')
+    //     .then((res) => res.json())
+    //     .then((dataWork: workProjectProps[]) => {
+    //         console.log(dataWork)
+    //         setWorkProject(dataWork);
+    //     });
+    // }, []);
+
+    // useEffect(() => {
+    //     setWorkProject(dataJson)
+    //     console.log(dataJson)
+    // }, [])
+
     return (
         <div className="h-screen relative bg-cover bg-center overflow-hidden">
             <div className="absolute inset-0 h-full w-full filter blur-sm p-5 bg-[url('/src/assets/bg-web.jpg')] bg-cover bg-center z-0">
@@ -152,26 +177,22 @@ function LandingPage() {
                     <ListProject 
                     workProject={
                         <>
-                            <div className="item">
-                                <img className="w-25 mx-2" src={workProjectOne} alt="Work Project 1" />
-                                <h6>Kainmu</h6>
-                            </div>
-                            <div className="item">
-                                <img className="w-25 mx-2" src={workProjecttwo} alt="Work Project 1" />
-                                <h6>Inessa</h6>
-                            </div>
+                            {workProjectData.map((work) => (
+                                <div className="item" key={work.id}>
+                                    <img className="w-25 mx-2" src={work.img} alt={work.title} />
+                                    <h6>{work.title}</h6>
+                                </div>
+                            ))}
                         </>
                     }
                     personalProject={
                         <>
-                            <div className="item">
-                                <img className="w-25 mx-2" src={personalProjectOne} alt="Personal Project One" />
-                                <h6>Waysbeans</h6>
-                            </div>
-                            <div className="item">
-                                <img className="w-25 mx-2" src={personalProjectTwo} alt="Personal Project One" />
-                                <h6>Dewetour</h6>
-                            </div>
+                            {personalProjectData.map((personal) => (
+                                <div className="item" key={personal.id}>
+                                    <img className="w-25 mx-2" src={personal.img} alt={personal.title} />
+                                    <h6>{personal.title}</h6>
+                                </div>
+                            ))}
                         </>
                     } />
                 </article>
