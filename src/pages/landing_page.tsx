@@ -1,49 +1,40 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { useState } from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDiscord, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faMessage } from "@fortawesome/free-regular-svg-icons";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-import profileImage from "../assets/cv.jpg";
-import React from "react";
+import { faHtml5 } from "@fortawesome/free-brands-svg-icons";
+import { faCss } from "@fortawesome/free-brands-svg-icons";
+import { faReact } from "@fortawesome/free-brands-svg-icons";
+import { faNodeJs } from "@fortawesome/free-brands-svg-icons";
+import { faBootstrap } from "@fortawesome/free-brands-svg-icons";
+import { faCircle } from "@fortawesome/free-regular-svg-icons";
+import { faWind } from "@fortawesome/free-solid-svg-icons";
+import { faJs } from "@fortawesome/free-brands-svg-icons";
+import { faGolang } from "@fortawesome/free-brands-svg-icons";
+import { faPython } from "@fortawesome/free-brands-svg-icons";
 
 import ListProject from "./list_project";
 import { workProjectData }from "../data/work-project";
 import { personalProjectData  } from "../data/personal-project";
 
-import personalProjectOne from "../assets/personaone.png";
-import personalProjectTwo from "../assets/personaltwo.png";
+import profileImage from "../assets/cv.jpg";
+import { Link } from "react-router-dom";
+import ModalLanguageEnglish from "../components/modal";
+import ModalGerman from "../components/modalGerman";
 
-// type workProjectProps = {
-//     id: number;
-//     title: string;
-//     img: string;
-//     descriptionDe: string;
-//     descriptionEn: string;
-//     stackTech: React.ReactNode;
-// }
 
 function LandingPage() {
-    // const [workProject, setWorkProject ] = useState<workProjectProps[]>([]);
-    
-    // useEffect(() => {
-    //     fetch('/data/work-project.json')
-    //     .then((res) => res.json())
-    //     .then((dataWork: workProjectProps[]) => {
-    //         console.log(dataWork)
-    //         setWorkProject(dataWork);
-    //     });
-    // }, []);
-
-    // useEffect(() => {
-    //     setWorkProject(dataJson)
-    //     console.log(dataJson)
-    // }, [])
+    const [ showModal, setShowModal ] = useState(false)
+    const [ showDeutsch, setShowDeutsch ] = useState(false)
 
     return (
         <div className="h-screen relative bg-cover bg-center overflow-hidden">
             <div className="absolute inset-0 h-full w-full filter blur-sm p-5 bg-[url('/src/assets/bg-web.jpg')] bg-cover bg-center z-0">
             </div>
-            <section className="absolute inset-0 mx-auto lg:w-1/2 sm:w-4/5 bg-[#f5f5eb] z-10 overflow-y-scroll h-full alegreya-font">
+            <section className="absolute inset-0 mx-auto lg:w-1/2 sm:w-5/6 bg-[#f5f5eb] z-10 overflow-y-scroll h-full alegreya-font">
                 <div className="relative z-0 bg-[url('/src/assets/jumbotron.jpg')] bg-cover bg-center w-full h-60 m-0 p-0">
                 </div>
                 <div className="h-40 sm:w-48 w-48 rounded-full mx-auto relative top-[-100px] p-3 text-center">
@@ -103,7 +94,9 @@ function LandingPage() {
                                 <ul className="list-disc pl-6">
                                     <li><strong>Developed</strong> responsive front-end templates for web applications in Odoo using HTML(Odoo XML), SCSS/CSS, Javascript and Python.</li>
                                     <li><strong>Updated</strong> UI/UX for design Websites and E-commerce. </li> 
-                                    <li><strong>Created</strong> Website company profile, Made reports as Pivot, Chart, and Process Data. </li> 
+                                    <li><strong>Created</strong> Website company profile. </li> 
+                                    <li><strong>Made</strong> reports as Pivot, Chart, and Process Data.</li>
+                                    <li><strong>Maintenance</strong> website as fix bug, upgrade sistem, performance optimization.</li>
                                 </ul>
                             </main>
                         </div>
@@ -146,57 +139,69 @@ function LandingPage() {
                 <h1 className="px-7 mx-auto py-1 my-1 underline font-extrabold text-2xl text-[#b3907a]">Skills: </h1>
                 <article className="px-7 mx-auto py-2 my-3">
                     <h1 className="font-extrabold text-xl text-[#b3907a]">Languages: </h1>
-                    <ul className="list-disc pl-6">
-                        <li><strong>Indonesia:</strong> C2 (Native Speaker)</li>
-                        <li><strong>English:</strong> B2 (upper-intermediate)</li>
-                        <li><strong>German:</strong> A2 (Basic)</li>
-                    </ul>
+                    <div className="pl-6">
+                        <button className="block btn-link-decoration"><strong>Indonesia:</strong> C2 (Native Speaker)</button>
+                        <button className="block btn-link-decoration" onClick={() => setShowModal(true)}><strong>English:</strong> B2 (upper-intermediate)</button>
+                        <button className="block btn-link-decoration" onClick={() => setShowDeutsch(true)}><strong>German:</strong> A2 (Basic)</button>
+                    </div>
                 </article>
                 <article className="px-7 mx-auto py-2 my-3">
                     <h1 className="font-extrabold text-xl text-[#b3907a]">Programming Language: </h1>
-                    <ul className="list-disc pl-6">
-                        <li>Javascript</li>
-                        <li>Go</li>
-                        <li>Python</li>
+                    <ul className="list-none pl-6">
+                        <li><FontAwesomeIcon icon={faJs} size="1x" /> Javascript</li>
+                        <li><FontAwesomeIcon icon={faGolang} size="1x" /> Go</li>
+                        <li><FontAwesomeIcon icon={faPython} size="1x" /> Python</li>
                     </ul>
                 </article>
                 <article className="px-7 mx-auto py-2 my-3">
                     <h1 className="font-extrabold text-xl text-[#b3907a]">Markup, Framework, etc: </h1>
-                    <ul className="list-disc pl-6">
-                        <li>HTML</li>
-                        <li>CSS/SCSS</li>
-                        <li>React JS</li>
-                        <li>Express JS</li>
-                        <li>Odoo Software</li>
-                        <li>Tailwind</li>
-                        <li>Bootstrap</li>
+                    <ul className="list-none pl-6">
+                        <li><FontAwesomeIcon icon={faHtml5} size="1x" /> HTML</li>
+                        <li><FontAwesomeIcon icon={faCss} size="1x" /> CSS/SCSS</li>
+                        <li><FontAwesomeIcon icon={faReact} size="1x" /> React JS</li>
+                        <li><FontAwesomeIcon icon={faNodeJs} size="1x" /> Express JS</li>
+                        <li><FontAwesomeIcon icon={faCircle} size="1x" /> Odoo Software</li>
+                        <li><FontAwesomeIcon icon={faWind} size="1x" /> Tailwind</li>
+                        <li><FontAwesomeIcon icon={faBootstrap} size="1x" /> Bootstrap</li>
                     </ul>
                 </article>
                 <h1 className="px-7 mx-auto py-1 my-1 underline font-extrabold text-2xl text-[#b3907a]">Project Portofolio: </h1>
-                <article className="px-7">
+                <article id="bottom" className="px-7">
                     <ListProject 
                     workProject={
                         <>
                             {workProjectData.map((work) => (
-                                <div className="item" key={work.id}>
+                                <Link to={`/work-project/${work.id}`} className="item cursor-pointer" key={work.id}>
                                     <img className="w-25 mx-2" src={work.img} alt={work.title} />
                                     <h6>{work.title}</h6>
-                                </div>
+                                </Link>
                             ))}
                         </>
                     }
                     personalProject={
                         <>
                             {personalProjectData.map((personal) => (
-                                <div className="item" key={personal.id}>
+                                <Link to={`/personal-project/${personal.id}`} className="item cursor-pointer" key={personal.id}>
                                     <img className="w-25 mx-2" src={personal.img} alt={personal.title} />
                                     <h6>{personal.title}</h6>
-                                </div>
+                                </Link>
                             ))}
                         </>
                     } />
                 </article>
             </section>
+            {showModal && (
+                <ModalLanguageEnglish
+                    show={showModal}
+                    setShow={setShowModal}
+                />
+            )}
+            {showDeutsch && (
+                <ModalGerman 
+                    showDeutsch={showDeutsch}
+                    setShowDeutsch={setShowDeutsch}
+                />
+            )}
         </div>
     )
 

@@ -13,7 +13,7 @@ export const workProjectData =
         "title": "Inessa",
         "img": require("../assets/worktwo.png"),
         "descriptionDe": "",
-        "descriptionEn": "",
+        "descriptionEn": "Inessa is ecommerce who people can but clothes, fashion with them smartphone. So, people can search, seeing in picture, and pay with one click.",
         "stackTech": ["Odoo Software", "HTML/XML", "CSS/SCSS", "Javascript", "Python"]
     }
 ]

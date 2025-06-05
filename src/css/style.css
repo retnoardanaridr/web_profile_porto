@@ -5,3 +5,12 @@
     font-style: normal;
   }
 
+
+.btn-link-decoration:hover {
+  text-decoration: underline;
+}
+@media (max-width: 575.98px) {
+  .btn-link-decoration {
+    text-decoration: underline;
+  }
+}

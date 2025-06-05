@@ -20,7 +20,7 @@ const carouselOwlOptions = {
 export default function ListProject( { personalProject, workProject }: OwlProps) {
     return (
         <>
-            <ul className="list-decimal px-5">
+            <ul className="list-decimal">
                 <li className="mb-2 text-[#6C3428]">Work Project</li>
                 <OwlCarousel className="owl-theme" {...carouselOwlOptions}>
                     {workProject}
