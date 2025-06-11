@@ -15,6 +15,7 @@ import { faWind } from "@fortawesome/free-solid-svg-icons";
 import { faJs } from "@fortawesome/free-brands-svg-icons";
 import { faGolang } from "@fortawesome/free-brands-svg-icons";
 import { faPython } from "@fortawesome/free-brands-svg-icons";
+import { faGit } from "@fortawesome/free-brands-svg-icons";
 
 import ListProject from "./list_project";
 import { workProjectData }from "../data/work-project";
@@ -163,6 +164,7 @@ function LandingPage() {
                         <li><FontAwesomeIcon icon={faCircle} size="1x" /> Odoo Software</li>
                         <li><FontAwesomeIcon icon={faWind} size="1x" /> Tailwind</li>
                         <li><FontAwesomeIcon icon={faBootstrap} size="1x" /> Bootstrap</li>
+                        <li><FontAwesomeIcon icon={faGit} size="1x" /> Git</li>
                     </ul>
                 </article>
                 <h1 className="px-7 mx-auto py-1 my-1 underline font-extrabold text-2xl text-[#b3907a]">Project Portofolio: </h1>
