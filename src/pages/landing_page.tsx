@@ -21,7 +21,7 @@ import ListProject from "./list_project";
 import { workProjectData }from "../data/work-project";
 import { personalProjectData  } from "../data/personal-project";
 
-import profileImage from "../assets/cv.jpg";
+import profileImage from "../assets/Retno_ardanari.jpg";
 import { Link } from "react-router-dom";
 import ModalLanguageEnglish from "../components/modal";
 import ModalGerman from "../components/modalGerman";
