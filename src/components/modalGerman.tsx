@@ -20,7 +20,7 @@ export default function ModalGerman({showDeutsch, setShowDeutsch}: ModalGermanPr
                     <Modal.Body>
                         <div>
                             <img src={duolingo} alt="Banner Duolingo Score" />
-                            <p className="text-center text-green-500 font-bold">Status: Ongoing learning, current score: 52 (A1–A2)</p>
+                            <p className="text-center text-green-500 font-bold">Status: Ongoing learning, current score: 63 (B1)</p>
                             <img src={score} alt="Banner Score" />
                         </div>
                     </Modal.Body>

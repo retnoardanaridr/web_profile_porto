@@ -16,6 +16,7 @@ import { faJs } from "@fortawesome/free-brands-svg-icons";
 import { faGolang } from "@fortawesome/free-brands-svg-icons";
 import { faPython } from "@fortawesome/free-brands-svg-icons";
 import { faGit } from "@fortawesome/free-brands-svg-icons";
+import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 
 import ListProject from "./list_project";
 import { workProjectData }from "../data/work-project";
@@ -141,9 +142,9 @@ function LandingPage() {
                 <article className="px-7 mx-auto py-2 my-3">
                     <h1 className="font-extrabold text-xl text-[#b3907a]">Languages: </h1>
                     <div className="pl-6">
-                        <button className="block btn-link-decoration"><strong>Indonesia:</strong> C2 (Native Speaker)</button>
-                        <button className="block btn-link-decoration" onClick={() => setShowModal(true)}><strong>English:</strong> B2 (upper-intermediate)</button>
-                        <button className="block btn-link-decoration" onClick={() => setShowDeutsch(true)}><strong>German:</strong> A2 (Basic)</button>
+                        <button className="block btn-link-decoration"><strong><FontAwesomeIcon icon={faCircleInfo} /> Indonesia:</strong> C2 (Native Speaker)</button>
+                        <button className="block btn-link-decoration" title="Click to see certificates & achievements" onClick={() => setShowModal(true)}><strong><FontAwesomeIcon icon={faCircleInfo} /> English:</strong> B2 (upper-intermediate)</button>
+                        <button className="block btn-link-decoration" title="Click to see certificates & achievements" onClick={() => setShowDeutsch(true)}><strong><FontAwesomeIcon icon={faCircleInfo} /> German:</strong> A2 (Basic)</button>
                     </div>
                 </article>
                 <article className="px-7 mx-auto py-2 my-3">
