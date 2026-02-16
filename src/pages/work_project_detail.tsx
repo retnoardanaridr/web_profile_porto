@@ -25,7 +25,9 @@ export default function ProjectDetail() {
                         <h3 className="text-[#b3907a]">Retno Ardanari D R</h3>
                     </header>
                     <article className="mx-5">
-                        <img src={project.img} alt="Project" /> 
+                        <Link to={project.link}>
+                            <img src={project.img} alt="Project" /> 
+                        </Link>
                         <h1 className="text-center m-4 text-xl font-bold text-[#b3907a]">{project.title}</h1>
                         <h2 className="text-[#b3907a] text-xl">Description</h2>
                         <p className="text-justify">{project.descriptionEn}</p>
