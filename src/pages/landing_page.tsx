@@ -42,9 +42,14 @@ function LandingPage() {
                 <div className="h-40 sm:w-48 w-48 rounded-full mx-auto relative top-[-100px] p-3 text-center">
                     <img src={profileImage} className="w-100 rounded-full" alt="Retno Ardanari D R" />
                 </div>
-                <h3 className="text-center my-2">Retno Ardanari Dwi Rahmawati</h3>
+                <h3 className="text-center my-2 font-bold">Retno Ardanari Dwi Rahmawati</h3>
+                <h3 className="text-center my-2 font-bold">Software Developer || Fullstack Developer || Odoo Developer</h3>
                 <summary className="p-7 text-justify">
-                    I'm a Frontend & Fullstack Developer with experience in building web applications using React.js and backend development with Go language. Currently, I'm working as a Frontend Developer specializing in Odoo, focusing on custom modules and UI development using HTML, CSS, JavaScript, and Python. I enjoy solving problems through clean code and creating user-friendly interfaces. 
+                    Software Developer with over 3 years of professional experience developing and maintaining web applications,
+implementing business requirements, and delivering scalable business solutions. Experienced in JavaScript, React,
+Python, Odoo-ERP, REST APIs, PostgreSQL, and modern web development practices, with additional full-stack
+training using React.js and Go. Passionate about building clean, user-friendly applications, continuously learning new
+technologies, and contributing to collaborative, international engineering teams. 
                 </summary>
                 <h1 className="px-7 mx-auto py-1 my-1 underline font-extrabold text-2xl text-[#b3907a]">Contact: </h1>
                 <div className="px-7">
@@ -65,8 +70,30 @@ function LandingPage() {
                         </a>
                 </div>
                 <h1 className="px-7 mx-auto py-2 my-1 font-extrabold text-2xl text-[#b3907a] underline">About Me: </h1>
-                <section className="px-7 mx-auto py-2 my-3 bg-[#c1b6a3] text-white rounded-lg w-11/12">
-                    <h4 className="font-extrabold text-xl text-[#b3907a]">Education: </h4>
+                <h1 className="px-7 mx-auto py-2 my-1 font-extrabold text-2xl text-[#b3907a]">Work Experience </h1>
+                <section className="px-7 mx-auto py-2 my-3 bg-[#9c8665] text-white rounded-lg w-11/12">
+                    <div className="flex justify-between">
+                        <div>
+                            <p className="font-semibold text-base">PT Moiz Indonesia</p>
+                            <p className="font-semibold text-sm">Web and Odoo Developer</p>
+                            <main>
+                                <h6>Job Description: </h6>
+                                <ul className="list-disc pl-6">
+                                    <li><strong>Developed</strong> and <strong>customised</strong> responsive frontend templates for business web applications using XML, SCSS/CSS, JavaScript, and Python within the Odoo framework.</li>
+                                    <li><strong>Improved</strong> user interface and user experience across corporate websites and e-commerce platforms by implementing responsive frontend solutions.</li> 
+                                    <li><strong>Designed</strong> and <strong>developed</strong> company websites, interactive dashboards, reports, and automated business solutions to improve operational efficiency.</li> 
+                                    <li><strong>Implemented</strong> and <strong>customised</strong> business workflows across website, sales, purchasing, and HR systems based on business requirements.</li>
+                                    <li><strong>Maintained</strong> and <strong>enhanced</strong> existing business application modules by troubleshooting issues, fixing bugs, and implementing system improvements within the Odoo platform.</li>
+                                </ul>
+                            </main>
+                        </div>
+                        <div>
+                            <span className="text-sm">2023-Until Now</span>
+                        </div>
+                    </div>
+                </section>
+                <h1 className="px-7 mx-auto py-2 my-1 font-extrabold text-2xl text-[#b3907a]">Education </h1>
+                <section className="px-7 mx-auto py-2 my-3 bg-[#9c8665] text-white rounded-lg w-11/12">
                     <div className="flex justify-between">
                         <div>
                             <p className="font-semibold text-base">Muhammadiyah University of Ponorogo</p>
@@ -85,30 +112,8 @@ function LandingPage() {
                         </div>
                     </div>
                 </section>
-                <section className="px-7 mx-auto py-2 my-3 bg-[#c1b6a3] text-white rounded-lg w-11/12">
-                    <h4 className="font-extrabold text-xl text-[#b3907a]">Work Experience: </h4>
-                    <div className="flex justify-between">
-                        <div>
-                            <p className="font-semibold text-base">PT Moiz Indonesia</p>
-                            <p className="font-semibold text-sm">Odoo Frontend Developer</p>
-                            <main>
-                                <h6>Job Description: </h6>
-                                <ul className="list-disc pl-6">
-                                    <li><strong>Developed</strong> responsive front-end templates for web applications in Odoo using HTML(Odoo XML), SCSS/CSS, Javascript and Python.</li>
-                                    <li><strong>Updated</strong> UI/UX for design Websites and E-commerce. </li> 
-                                    <li><strong>Created</strong> Website company profile. </li> 
-                                    <li><strong>Made</strong> reports as Pivot, Chart, and Process Data.</li>
-                                    <li><strong>Maintenance</strong> website as fix bug, upgrade sistem, performance optimization.</li>
-                                </ul>
-                            </main>
-                        </div>
-                        <div>
-                            <span className="text-sm">2023-Until Now</span>
-                        </div>
-                    </div>
-                </section>
-                <section className="px-7 mx-auto py-2 my-3 bg-[#c1b6a3] text-white rounded-lg w-11/12">
-                    <h4 className="font-extrabold text-xl text-[#b3907a]">Training: </h4>
+                <h1 className="px-7 mx-auto py-2 my-1 font-extrabold text-2xl text-[#b3907a]">Training </h1>
+                <section className="px-7 mx-auto py-2 my-3 bg-[#9c8665] text-white rounded-lg w-11/12">
                     <article className="mb-3 flex justify-between">
                         <div>
                             <p className="font-semibold text-base">PT Dumbways ID</p>
@@ -144,7 +149,7 @@ function LandingPage() {
                     <div className="pl-6">
                         <button className="block btn-link-decoration"><strong><FontAwesomeIcon icon={faCircleInfo} /> Indonesia:</strong> C2 (Native Speaker)</button>
                         <button className="block btn-link-decoration" title="Click to see certificates & achievements" onClick={() => setShowModal(true)}><strong><FontAwesomeIcon icon={faCircleInfo} /> English:</strong> B2 (upper-intermediate)</button>
-                        <button className="block btn-link-decoration" title="Click to see certificates & achievements" onClick={() => setShowDeutsch(true)}><strong><FontAwesomeIcon icon={faCircleInfo} /> German:</strong> A2 (Basic)</button>
+                        <button className="block btn-link-decoration" title="Click to see certificates & achievements" onClick={() => setShowDeutsch(true)}><strong><FontAwesomeIcon icon={faCircleInfo} /> German:</strong> B1 (Early)</button>
                     </div>
                 </article>
                 <article className="px-7 mx-auto py-2 my-3">
