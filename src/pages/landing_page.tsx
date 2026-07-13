@@ -100,11 +100,10 @@ technologies, and contributing to collaborative, international engineering teams
                             <p className="font-semibold text-sm">Bachelor of Engineering / Informatic Engineering</p>
                             <span>GPA 3.45/4.00</span>
                             <ul className="list-disc pl-6">
-                                <li>Learn a programming language</li>
-                                <li>Learn to build a website from zero</li>
-                                <li>Structure database and data management</li>
-                                <li>Computer and Networking</li>
-                                <li>Mobile App built with Android Studio</li>
+                                <li>Studied software engineering, web development, database systems, and computer networking.</li>
+                                <li>Built web applications from scratch using modern web technologies.</li>
+                                <li>Designed relational database structures and implemented data management concepts.</li>
+                                <li>Developed Android mobile applications using Android Studio.</li>
                             </ul>
                         </div>
                         <div>
@@ -117,12 +116,13 @@ technologies, and contributing to collaborative, international engineering teams
                     <article className="mb-3 flex justify-between">
                         <div>
                             <p className="font-semibold text-base">PT Dumbways ID</p>
-                            <p className="text-sm">Fullstack Developer</p>
+                            <p className="text-sm">Fullstack Developer Training</p>
                             <ul className="list-disc pl-6">
-                                <li>Build, creating E-commerce website</li>
-                                <li>Implementation code from figma design to React JS and Go Language</li>
-                                <li>Learn Data Management and How to integration with Axios JS</li>
-                                <li>Learn MySQL & PostgreSQL</li>
+                                <li>Completed a 7-month Full Stack Web Development training focused on React.js, Go, and modern web technologies.</li>
+                                <li>Built responsive e-commerce web applications by implementing UI designs from Figma using React.js.</li>
+                                <li>Developed backend services and REST APIs using Go and integrated frontend applications with Axios.</li>
+                                <li>Worked with MySQL and PostgreSQL for database design, management, and data integration.</li>
+                                <li>Collaborated in developing a full-stack e-commerce application following industry development practices.</li>
                             </ul>
                         </div>
                         <div>
@@ -132,10 +132,10 @@ technologies, and contributing to collaborative, international engineering teams
                     <article className="flex justify-between">
                     <div>
                             <p className="font-semibold text-base">Dicoding Academy</p>
-                            <p className="text-sm">Javascript Fundamental</p>
+                            <p className="text-sm">Backend Developer Basic Training</p>
                             <ul className="list-disc pl-6">
-                                <li>Learning Basic Javascript</li>
-                                <li>Deployment AWS fundamental</li>
+                                <li>Strengthened JavaScript fundamentals including ES6, DOM manipulation, asynchronous programming, and problem-solving.</li>
+                                <li>Learned fundamental AWS cloud services and deployment concepts for modern web applications.</li>
                             </ul>
                         </div>
                         <div>

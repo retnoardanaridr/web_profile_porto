@@ -24,13 +24,19 @@ export default function ProjectDetail() {
                         </Link>
                         <h3 className="text-[#b3907a]">Retno Ardanari D R</h3>
                     </header>
-                    <article className="mx-5">
+                    <article className="mx-5 my-8">
                         <Link to={project.link}>
                             <img src={project.img} alt="Project" /> 
                         </Link>
                         <h1 className="text-center m-4 text-xl font-bold text-[#b3907a]">{project.title}</h1>
                         <h2 className="text-[#b3907a] text-xl">Description</h2>
                         <p className="text-justify">{project.descriptionEn}</p>
+                        <h2 className="text-[#b3907a] text-xl">Key Contributions</h2>
+                        <ul className="list-disc pl-6">
+                            {project.contributions.map((tech:string, index: number) => (
+                                <li key={index}>{tech}</li>
+                            ))}
+                        </ul>
                         <h2 className="text-[#b3907a] text-xl">Stack Tech</h2>
                         <ul className="list-disc pl-6">
                             {project.stackTech.map((tech:string, index: number) => (
